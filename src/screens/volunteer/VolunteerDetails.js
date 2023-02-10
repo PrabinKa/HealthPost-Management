@@ -21,11 +21,9 @@ import * as Location from "expo-location";
 import { COLORS } from "../../constants/Constants";
 import { SharedElement } from "react-navigation-shared-element";
 
-// const GOOGLE_MAPS_APIKEY = "kjdfs_sjd-smdsms_sjdn";
 
 const { width, height } = Dimensions.get("window");
 
-// AIzaSyBjvdlRj5cVScgDpNgaHJIrkP_z9uv-rcs
 
 const VolunteerDetails = ({ navigation }) => {
   const locations = {
@@ -144,7 +142,7 @@ const VolunteerDetails = ({ navigation }) => {
           onPress={() => navigation.navigate("Map")}
             style={{ position: "absolute", right: 0, bottom: 0 }}
           >
-            {/* <SharedElement id={"map"}> */}
+            <SharedElement id={"map"}>
               <MapView
                 style={{ height: 60, width: 60 }}
                 region={{
@@ -157,7 +155,7 @@ const VolunteerDetails = ({ navigation }) => {
               >
                 <Marker coordinate={locations} />
               </MapView>
-            {/* </SharedElement> */}
+            </SharedElement>
           </TouchableOpacity>
         </View>
       </View>

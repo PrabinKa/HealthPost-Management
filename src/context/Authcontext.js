@@ -1,6 +1,8 @@
 import React from 'react';
 import { Alert } from 'react-native'
 
+import { BASE_URL } from "@env"
+
 export const Authcontext = React.createContext()
 
 const Authprovider = ({children}) => {
@@ -9,9 +11,10 @@ const Authprovider = ({children}) => {
   const [loginLoader, setLoginLoader] = React.useState(false)
   const [logoutLoader, setLogoutLoader] = React.useState(false)
 
+
   const Login = async({email, password}) => {
     setLoginLoader(true)
-    // await fetch("http://10.0.2.2/healthpost/api/login", {
+    // await fetch(`${BASE_URL}/login`, {
     //   method: "POST",
     //   headers: {
     //     Accept: "application/json",

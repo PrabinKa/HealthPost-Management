@@ -79,19 +79,6 @@ const DrawerNavigation = () => {
           ),
         }}
       />
-      <Drawer.Screen
-        name="Healthpost Lists"
-        component={HealthpostLists}
-        options={{
-          drawerIcon: ({ focused, size }) => (
-            <Ionicons
-              name="home-outline"
-              size={25}
-              color={focused ? COLORS.green : COLORS.darkGray}
-            />
-          ),
-        }}
-      />
     </Drawer.Navigator>
   );
 };
